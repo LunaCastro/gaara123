@@ -1,9 +1,11 @@
+import { setStatusBarBackgroundColor } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { colors } from '../../styles/colors';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        color: "#142A4A"
+        color: "#BD8F65",
+        backgroundColor: colors.third
 
     },
     panel: {

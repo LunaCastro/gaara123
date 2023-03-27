@@ -8,14 +8,15 @@ import { styles } from './styles';
 export function Slider3({ setPageI }: IPage) {
     const slide1 = require("../../assets/slide1.png")
     const slide1Texts = [
-        { id: '1', text: 'Filiais em locais estratégicos.'},
-        { id: '2', text: 'Vários modelos de veículos.'},
-        { id: '3', text: 'Preço acessível'},
+        { id: '1', text: '1. sites de campanhas.'},
+        { id: '2', text: '2. Para amigos próximos.'},
+        { id: '3', text: '3. Nas própias intituições.'},
+        { id: '4', text: '4. Em pontos de coleta específicos.'},
     ]
     return (
-        <ImageBackground source={slide1} style={styles.container} >
+        <ImageBackground style={styles.container} >
             <View style={styles.panel}>
-                <ComponentTitleSlider titleI='Operação eficiente' />
+                <ComponentTitleSlider titleI='Por onde doar?' />
                 <FlatList
                     data={slide1Texts}
                     renderItem={({ item }) =>
@@ -25,10 +26,10 @@ export function Slider3({ setPageI }: IPage) {
                 />
             </View>
             <View style={styles.buttonSlider}>
-                <ComponentButtonSlider onPressI={() => setPageI(1)} />
-                <ComponentButtonSlider onPressI={() => setPageI(2)} />
-                <ComponentButtonSlider onPressI={() => setPageI(3)} />
-                <ComponentButtonSlider onPressI={() => setPageI(4)} />
+                <ComponentButtonSlider onPressI={() => setPageI(1)} cor={false} />
+                <ComponentButtonSlider onPressI={() => setPageI(2)} cor={false}/>
+                <ComponentButtonSlider onPressI={() => setPageI(3)} cor={true} />
+                <ComponentButtonSlider onPressI={() => setPageI(4)} cor={false}/>
             </View>
         </ImageBackground>
     );

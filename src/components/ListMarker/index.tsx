@@ -1,4 +1,5 @@
 import { Text, View } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import { Marker } from '../Marker'
 import { styles } from './style'
 import React from 'react'
