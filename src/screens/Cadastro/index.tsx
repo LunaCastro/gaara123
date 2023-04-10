@@ -43,8 +43,8 @@ export function Cadastro() {
                         style={styles.input}
                     />
                 </View>
-                <ComponentButtoninterface title="Salvar" type="primary" onPressI={() => (console.log("Login"))} />
-                <ComponentButtoninterface title="Voltar" type="secondary" onPressI={() => (console.log("Login"))} />
+                <ComponentButtoninterface title="Salvar" type="primary" onPressI={() => (navigation.navigate("Cadastro"))} />
+                <ComponentButtoninterface title="Voltar" type="secondary" onPressI={() => (("Login"))} />
             </KeyboardAvoidingView>
         </View>
     )

@@ -6,8 +6,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
 import { ComponentButtoninterface } from "../../components"
 import { IPage } from '../../../App';
+import { LoginTypes } from '../../navigations/login.navigation';
 
-export function Login({ setPageI }: IPage) {
+export function Login((navigation): LoginTypes) {
     return (
         <View style={styles.container}>
             <KeyboardAvoidingView>
