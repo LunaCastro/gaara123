@@ -26,10 +26,12 @@ export function Slider1({ setPageI }: IPage) {
                 />
             </View>
             <View style={styles.buttonSlider}>
-                <ComponentButtonSlider onPressI={() => setPageI(1)} cor={true}/>
-                <ComponentButtonSlider onPressI={() => setPageI(2)} cor={false} />
+                <ComponentButtonSlider onPressI={() => setPageI(1)} cor={true} />
+                <ComponentButtonSlider onPressI={() => setPageI(2)} cor={false}/>
                 <ComponentButtonSlider onPressI={() => setPageI(3)} cor={false}/>
-                <ComponentButtonSlider onPressI={() => setPageI(4)} cor={false} />
+                <ComponentButtonSlider onPressI={() => setPageI(4)} cor={false}/>
+                <ComponentButtonSlider onPressI={() => setPageI(5)} cor={false}/>
+                <ComponentButtonSlider onPressI={() => setPageI(6)} cor={false}/>
             </View>
         </ImageBackground>
     );
