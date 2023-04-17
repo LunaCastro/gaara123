@@ -7,8 +7,9 @@ import { colors } from '../../styles/colors';
 import { ComponentButtoninterface } from "../../components"
 import { IPage } from '../../../App';
 import { LoginTypes } from '../../navigations/login.navigation';
+import { Navigation } from '../../navigations';
 
-export function Login((navigation): LoginTypes) {
+export function Login({navigation}: LoginTypes) {
     return (
         <View style={styles.container}>
             <KeyboardAvoidingView>
@@ -34,8 +35,8 @@ export function Login((navigation): LoginTypes) {
 
                     />
                 </View>
-                <ComponentButtoninterface title="Entrar" type="primary" onPressI={() => (console.log("Login"))} />
-                <ComponentButtoninterface title="Cadastre-se" type="secondary" onPressI={() => (console.log("Login"))} />
+                <ComponentButtoninterface title="Entrar" type="primary" onPressI={() => (navigation.navigate("Login"))} />
+                <ComponentButtoninterface title="Cadastre-se" type="secondary" onPressI={() => (navigation.navigate("Cadastro"))} />
             </KeyboardAvoidingView>
         </View>
     )
