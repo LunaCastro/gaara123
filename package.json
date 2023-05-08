@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.8",
+    "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/drawer": "^6.6.2",
     "@react-navigation/stack": "^6.3.16",
     "expo": "~47.0.12",
     "expo-status-bar": "~1.4.2",
@@ -17,7 +19,8 @@
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
     "react-native-gesture-handler": "~2.8.0",
-    "react-native-web": "~0.18.9"
+    "react-native-web": "~0.18.9",
+    "react-native-reanimated": "~2.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
