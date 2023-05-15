@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, KeyboardAvoidingView, Text, TextInput } from "react-native"
-import { styles } from "./styles"
+import { View, KeyboardAvoidingView, Text, TextInput } from "react-native";
+import { styles } from "./styles";
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
-import { ComponentButtoninterface } from "../../components"
+import { ComponentButtoninterface } from "../../components";
 import { IPage } from '../../../App';
 import { LoginTypes } from '../../navigations/login.navigation';
 import { Navigation } from '../../navigations';

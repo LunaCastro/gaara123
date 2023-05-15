@@ -43,7 +43,7 @@ export function Cadastro({navigation}: LoginTypes) {
                         autoCapitalize="none"
                         style={styles.input}
                     />
-                </View>git
+                </View>
                 <ComponentButtoninterface title="Salvar" type="primary" onPressI={() => (navigation.navigate("Drawer"))} />
                 <ComponentButtoninterface title="Voltar" type="secondary" onPressI={() => (navigation.navigate("Login"))} />
             </KeyboardAvoidingView>
