@@ -33,7 +33,7 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow $(Hope) to access your camera."
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
         }
       ],
       [
@@ -42,6 +42,12 @@
           "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
           "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
           "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
         }
       ]
     ]

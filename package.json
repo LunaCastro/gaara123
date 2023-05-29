@@ -23,7 +23,9 @@
     "react-native-reanimated": "~2.12.0",
     "expo-camera": "~13.1.0",
     "expo-media-library": "~15.0.0",
-    "expo-image-picker": "~14.0.2"
+    "expo-image-picker": "~14.0.2",
+    "expo-face-detector": "~12.0.0",
+    "expo-barcode-scanner": "~12.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

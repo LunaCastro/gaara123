@@ -1,4 +1,5 @@
 import { Dimensions, StyleSheet } from "react-native";
+import { colors } from "../../styles/colors";
 
 export const styles = StyleSheet.create({
   container: {
@@ -27,6 +28,19 @@ export const styles = StyleSheet.create({
   img: {
       width: Dimensions.get('window').width * 0.7,
       height: Dimensions.get('window').width * 0.7,
+  },
+  sorrisinho:{
+    backgroundColor: colors.primary,
+    color: colors.white,
+    borderRadius: 10,
+    margin:20,
+    alignItems: "center"
+
+  },
+  textinho:{
+    color: colors.white,
+    fontSize:24,
+
   }
 
 });
