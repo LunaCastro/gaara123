@@ -1,12 +1,14 @@
 import React from 'react';
 import {  BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ScreenPerfil, ScreenCamera } from "../screens";
+import { ScreenPerfil, ScreenCamera, ScreenLocation } from "../screens";
 import { colors } from '../styles/colors';
 import { Entypo } from '@expo/vector-icons'; 
+
 import { Ionicons } from '@expo/vector-icons'
 type TabParamList = {
   Perfil: undefined;
   Camera: undefined
+  Location: undefined
 };
 
 type TabScreenNavigationProp = BottomTabNavigationProp<TabParamList, 'Perfil'>
@@ -23,13 +25,13 @@ export function TabNavigation() {
         },
         headerTintColor: colors.white,
         tabBarActiveBackgroundColor: colors.primary,
-        tabBarActiveTintColor: colors.white
+        tabBarActiveTintColor: colors.third
       }}
     
     >
       <Tab.Screen name="Perfil" component={ScreenPerfil} 
         options={{
-          tabBarIcon: () => (<Ionicons name='person' color={colors.white} size={24}/>)
+          tabBarIcon: () => (<Ionicons name='person' color={colors.black} size={24}/>)
         }}
       
       />
@@ -37,7 +39,12 @@ export function TabNavigation() {
        options={{
         tabBarIcon: () => (<Ionicons name="camera" colors={colors.white} size={24} />)
       }}
-      />
+      />  
+      <Tab.Screen name="Location" component={ScreenLocation}
+      options={{
+       tabBarIcon: () => (<Entypo name="location-pin" size={24} color="black" />)
+     }}
+     />
     </Tab.Navigator>
   );
 }
