@@ -5,7 +5,9 @@ import { styles } from "./styles";
 import MapView, { Region, Marker, Polyline } from 'react-native-maps';
 import { colors } from '../../styles/colors';
 import { API_GOOGLE } from '@env';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { GooglePlaceData, GooglePlaceDetail, GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import MapViewDirections from 'react-native-maps-directions';
 
 type ICoords = {
     latitude: number
@@ -106,11 +108,38 @@ export function LocationScreen() {
                      {marker && marker.map((i) => (
                     <Marker key={i.latitude} coordinate={i}/>
                     ))}
+                     {marker && marker.map((i)=>(
+              <Marker key={i.latitude} coordinate={i}>
+                <MaterialCommunityIcons name="cellphone-marker" size={48} color={colors.black}/>
+              </Marker>
+            ))}
                     {coords && <Polyline
                      coordinates={coords}
                      strokeColor={colors.black}
                     strokeWidth={7}
             />}
+             {destination && (
+              <MapViewDirections
+                origin={region}
+                destination={destination}
+                apikey={API_GOOGLE}
+                strokeColor={colors.black}
+                strokeWidth={7}
+                lineDashPattern={[0]}
+                onReady={(result) =>{
+                  mapRef.current?.fitToCoordinates(result.coordinates,{
+                    edgePadding:{
+                      top:24,
+                      bottom:24,
+                      left:24,
+                      right:24
+                    }
+                  })
+                }}
+              
+              />
+
+            )}
                     </MapView>
             ):(
             <Text style={styles.paragraph}>{text}</Text>
