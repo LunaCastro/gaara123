@@ -10,7 +10,7 @@ import { LoginTypes } from '../../navigations/login.navigation';
 import { IRegister } from '../../services/data/User';
 import { apiUser } from '../../services/data';
 import { AxiosError } from 'axios';
-import { ComponentLoading } from '..';
+import { ComponentLoading } from '../../components';
 
 
 export interface IErrorApi {

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { View, Text } from "react-native";
-import { ComponentButtoninterface, COmponentLoading } from "../../components";
+import { ComponentButtoninterface} from "../../components";
 import { TabTypes } from "../../navigations/tab.navigation";
 import { styles } from "./style";
 import * as Notification from 'expo-notifications';
 import { useAuth } from "../../hooks/auth";
 import { registerForPushNotificationsAsync } from '../../services/data/Push'
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { ComponentLoading } from "..";
+import { ComponentLoading } from '../../components';
 
 Notification.setNotificationHandler({
     handleNotification: async () => ({
